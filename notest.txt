@@ -1,0 +1,18 @@
+
+** data
+-- to develop
+----
+-- paquete que ayuda a desaroolar mas rapido compilando cuando escucha cambios en ts
+
+--- TS
+* por defecto ts no es capas de imporatar archivos json.
+- se requiere activar "resolveJsonModule": true,
+- por defecto ts busca el fichero types.d.ts -- donde estan todos los tipos
+
+* Type vs Interface :
+- para crear tus propios tipos types- para crear contratos interfaces
+
+* Pick y Omit --utilidades de ts que permiten extender o copiar u omitir propeidades de otro tipo y asi crear uno
+nuevo  a partir de otros.
+
+--- dos archivos con el mismo nombre uno ts y uno json, node no me lo tomaba el ts
