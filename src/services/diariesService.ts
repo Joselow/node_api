@@ -1,5 +1,6 @@
 import { Diarie, DiarieWithoutComment } from '../types'
 import diariesJSON from './diaries.json'
+// import fs from "node:fs/promises"
 
 export const getDiaries = (): Diarie[] => {  
   return diariesJSON as Diarie[]
@@ -17,8 +18,7 @@ export const getDiaresWithoutComment = (): DiarieWithoutComment[] => {
   return diariesJSON.map(el => {
     const { comment, ...other } = el
     return other;
-  }) as DiarieWithoutComment[] ;
-  
+  }) as DiarieWithoutComment[] ; 
 }
 
 export const addDiarie = (diarie: Diarie) => {

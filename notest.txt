@@ -16,3 +16,12 @@
 nuevo  a partir de otros.
 
 --- dos archivos con el mismo nombre uno ts y uno json, node no me lo tomaba el ts
+
+** Importar un archivo JSON en JavaScript y modificar el objeto en la memoria no actualiza automáticamente el archivo en disco
+-- si importas un modulo y luego intetas sobreescirbir ese modulo no funciona no cambai ni nada, ya que estas usandolo habria mil problemas
+asi que la solucion es no improatrlo sino leer us ontenido y leugo m,odificarlo si se desea.
+
+**Date:
+-- Date() Devuelve una cadena que representa la fecha y hora actuales. Ignora cualquier argumento pasado.
+- new Date('dasdas'): Intenta crear un objeto Date basado en el argumento. 
+Si el argumento no es una fecha válida, el objeto Date resultante será inválido (Invalid Date).
