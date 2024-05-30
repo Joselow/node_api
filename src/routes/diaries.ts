@@ -1,5 +1,6 @@
 import express from "express";
 import { getDiaries, getDiaresWithoutComment, addDiarie, getById } from "../services/diariesService";
+import { verifyAndGetData } from "../utils/validations";
 
 const router = express.Router()
 
@@ -22,10 +23,13 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/new-diarie', (req, res) => {
-  const { id, date, weather, good_day, saw_accident, comment } = req.body
-  const newDiarie = {  id, date, weather, good_day, saw_accident, comment, }
-  addDiarie(newDiarie)
-  res.json(newDiarie)
+  try {
+    const newDiarie = verifyAndGetData(req.body)
+    addDiarie(newDiarie)
+    res.json(newDiarie)
+  } catch (e: any) {
+    res.status(400).send(e.message)
+  }
 })
 
 export default router

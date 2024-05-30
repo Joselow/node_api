@@ -19,9 +19,25 @@ nuevo  a partir de otros.
 
 ** Importar un archivo JSON en JavaScript y modificar el objeto en la memoria no actualiza automáticamente el archivo en disco
 -- si importas un modulo y luego intetas sobreescirbir ese modulo no funciona no cambai ni nada, ya que estas usandolo habria mil problemas
-asi que la solucion es no improatrlo sino leer us ontenido y leugo m,odificarlo si se desea.
+asi que la solucion es no improatrlo,  sino leer su contenido y leugo modificarlo si se desea.
 
 **Date:
 -- Date() Devuelve una cadena que representa la fecha y hora actuales. Ignora cualquier argumento pasado.
 - new Date('dasdas'): Intenta crear un objeto Date basado en el argumento. 
 Si el argumento no es una fecha válida, el objeto Date resultante será inválido (Invalid Date).
+
+**
+-- npm run dev -- npm configura temporalmente el PATH
+ para incluir node_modules/.bin. Esto permite que los comandos especificados en los scripts del package.json
+  puedan encontrar y ejecutar binarios instalados localmente en el proyecto, como ts-node-dev, asegurando que el comando 
+  se ejecute correctamente.
+
+**Binarios: Archivos ejecutables que vienen con los paquetes npm.
+
+-- npx ts-node-dev src/index.ts -- npx busca ts-node-dev en
+ node_modules/.bin del proyecto. Si lo encuentra, lo ejecuta directamente. Esto permite usar binarios 
+ locales sin necesidad de instalación global ni modificación del PATH, garantizando que se ejecute la versión correcta 
+ del paquete definida en las dependencias del proyec
+
+ * enums -- no genera un  objeto al compilar
+ * const enums -- no genera un objeto

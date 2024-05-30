@@ -1,5 +1,4 @@
-export type Wheater = 'sunny' | 'rayni' | 'cloudy' | 'windy' | 'stormy'
-
+import { Wheater } from "./enums"
 export interface Diarie{
   id: number
   date: string
